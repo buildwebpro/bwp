@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
       <Header />
       <main className="flex-1">
         {children}
