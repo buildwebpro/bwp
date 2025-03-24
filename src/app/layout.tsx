@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
+import ChatBot from "@/components/ChatBot";
 
 const notoSansThai = Noto_Sans_Thai({
   subsets: ["thai"],
@@ -37,6 +38,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         {children}
+        <ChatBot />
       </body>
     </html>
   );
