@@ -17,23 +17,23 @@ export default function Footer() {
                สร้างประสบการณ์ดิจิทัลที่เหนือระดับ ด้วยนวัตกรรมการออกแบบและพัฒนาเว็บ
             </p>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+              <Link href="https://facebook.com/buildwebpro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+              <Link href="https://twitter.com/buildwebpro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+              <Link href="https://instagram.com/buildwebpro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+              <Link href="https://linkedin.com/company/buildwebpro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+              <Link href="https://github.com/buildwebpro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
@@ -63,11 +63,7 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
-              <li>
-                <Link href="/careers" className="text-muted-foreground hover:text-primary">
-                  Careers
-                </Link>
-              </li>
+       
             </ul>
           </div>
 
@@ -126,15 +122,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-t pt-8 text-sm text-muted-foreground">
-          <p>© {currentYear} Buildweb PRO. All rights reserved.</p>
+        {/* Divider */}
+        <hr className="my-8 border-t border-border/60" />
+
+        {/* Bottom Credits */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground pt-4 pb-2">
+          <p>© 2025 Buildweb PRO. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/privacy-policy" className="hover:text-primary">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="hover:text-primary">
-              Terms of Service
-            </Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-of-service">Terms of Service</Link>
           </div>
         </div>
       </div>
