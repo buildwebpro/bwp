@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, X, Send, Trash2 } from "lucide-react";
 import { useDebounce } from "@/hooks/useDebounce";
+import DOMPurify from 'isomorphic-dompurify';
 
 interface Message {
   role: "user" | "assistant" | "system";
@@ -177,9 +178,18 @@ const sendLineNotification = async (message: string) => {
   }
 };
 
+// เพิ่ม interface สำหรับ form data
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  service?: string;
+}
+
 // ฟังก์ชันสำหรับแสดงฟอร์มติดต่อ
-const ContactForm = ({ onSubmit }: { onSubmit: (data: any) => Promise<void> }) => {
-  const [formData, setFormData] = useState({
+const ContactForm = ({ onSubmit }: { onSubmit: (data: ContactFormData) => Promise<void> }) => {
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     phone: '',
@@ -252,6 +262,14 @@ const ContactForm = ({ onSubmit }: { onSubmit: (data: any) => Promise<void> }) =
       </Button>
     </form>
   );
+};
+
+// ฟังก์ชันสำหรับ sanitize HTML
+const sanitizeHTML = (content: string) => {
+  return DOMPurify.sanitize(content, {
+    ALLOWED_TAGS: ['a', 'br', 'p', 'span'],
+    ALLOWED_ATTR: ['href', 'class']
+  });
 };
 
 export default function ChatBot() {
@@ -397,7 +415,7 @@ export default function ChatBot() {
     }
   };
 
-  const handleContactFormSubmit = async (formData: any) => {
+  const handleContactFormSubmit = async (formData: ContactFormData) => {
     const emailSent = await sendEmail(formData);
     const lineNotificationSent = await sendLineNotification(
       `มีข้อความใหม่จาก ${formData.name}\nอีเมล: ${formData.email}\nเบอร์โทร: ${formData.phone}\nบริการที่สนใจ: ${formData.service}\nข้อความ: ${formData.message}`
@@ -469,7 +487,7 @@ export default function ChatBot() {
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted"
                   }`}
-                  dangerouslySetInnerHTML={{ __html: message.content }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHTML(message.content) }}
                 />
               </div>
             ))}
@@ -477,7 +495,7 @@ export default function ChatBot() {
               <div className="flex justify-start">
                 <div 
                   className="bg-muted rounded-lg p-3 whitespace-pre-line"
-                  dangerouslySetInnerHTML={{ __html: streamingContent + '<span class="animate-pulse">▋</span>' }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHTML(streamingContent + '<span class="animate-pulse">▋</span>') }}
                 />
               </div>
             )}
