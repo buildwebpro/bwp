@@ -28,7 +28,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center space-x-2">
-            <img src="https://scontent.fbkk23-1.fna.fbcdn.net/v/t39.30808-1/444761717_10163501759810558_117263772520150492_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_ohc=K0HWHGwzJaYQ7kNvgFFXup3&_nc_oc=Adn_efw5laIFY-pnP7GRCfflbyXn0BEttmyGHfmXfXD1THJmudXrXfIfCN_EUUPLudU&_nc_zt=24&_nc_ht=scontent.fbkk23-1.fna&_nc_gid=fTqzivgqxknjuqI-tWfZKw&oh=00_AYFpgAcj3XkYpU5MszC3WESqjDYlpYHInmNzcuAhKoBIvw&oe=67E73E9B" height={64} width={64} /> 
+            <img src="/images/logo-bwp-web.png" height={64} width={64} /> 
           </Link>
           <nav className="hidden md:flex gap-6">
             {navigationLinks.map((link) => (

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Globe, ShoppingCart, Building2, Briefcase, Wrench, Heart, Palette, Database, Truck, Store, Home } from "lucide-react";
 import Image from "next/image";
+import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
   title: "ผลงานของเรา | Buildweb PRO",
@@ -194,114 +195,117 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="container py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">ผลงานของเรา</h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          ดูผลงานการออกแบบและพัฒนาเว็บไซต์ของเรา ครอบคลุมทุกอุตสาหกรรม
-        </p>
-      </div>
+    <>
+      <Header />
+      <div className="container py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">ผลงานของเรา</h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            ดูผลงานการออกแบบและพัฒนาเว็บไซต์ของเรา ครอบคลุมทุกอุตสาหกรรม
+          </p>
+        </div>
 
-      <Tabs defaultValue="all" className="space-y-8">
-        <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          <TabsTrigger value="all" className="flex items-center gap-2">
-            <Globe className="w-4 h-4" />
-            ทั้งหมด
-          </TabsTrigger>
-          <TabsTrigger value="ecommerce" className="flex items-center gap-2">
-            <ShoppingCart className="w-4 h-4" />
-            E-commerce
-          </TabsTrigger>
-          <TabsTrigger value="business" className="flex items-center gap-2">
-            <Building2 className="w-4 h-4" />
-            ธุรกิจ
-          </TabsTrigger>
-          <TabsTrigger value="healthcare" className="flex items-center gap-2">
-            <Heart className="w-4 h-4" />
-            สุขภาพ
-          </TabsTrigger>
-          <TabsTrigger value="logistics" className="flex items-center gap-2">
-            <Truck className="w-4 h-4" />
-            ขนส่ง
-          </TabsTrigger>
-          <TabsTrigger value="art" className="flex items-center gap-2">
-            <Palette className="w-4 h-4" />
-            ศิลปะ
-          </TabsTrigger>
-          <TabsTrigger value="management" className="flex items-center gap-2">
-            <Database className="w-4 h-4" />
-            ระบบจัดการ
-          </TabsTrigger>
-        </TabsList>
+        <Tabs defaultValue="all" className="space-y-8">
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <TabsTrigger value="all" className="flex items-center gap-2">
+              <Globe className="w-4 h-4" />
+              ทั้งหมด
+            </TabsTrigger>
+            <TabsTrigger value="ecommerce" className="flex items-center gap-2">
+              <ShoppingCart className="w-4 h-4" />
+              E-commerce
+            </TabsTrigger>
+            <TabsTrigger value="business" className="flex items-center gap-2">
+              <Building2 className="w-4 h-4" />
+              ธุรกิจ
+            </TabsTrigger>
+            <TabsTrigger value="healthcare" className="flex items-center gap-2">
+              <Heart className="w-4 h-4" />
+              สุขภาพ
+            </TabsTrigger>
+            <TabsTrigger value="logistics" className="flex items-center gap-2">
+              <Truck className="w-4 h-4" />
+              ขนส่ง
+            </TabsTrigger>
+            <TabsTrigger value="art" className="flex items-center gap-2">
+              <Palette className="w-4 h-4" />
+              ศิลปะ
+            </TabsTrigger>
+            <TabsTrigger value="management" className="flex items-center gap-2">
+              <Database className="w-4 h-4" />
+              ระบบจัดการ
+            </TabsTrigger>
+          </TabsList>
 
-        <TabsContent value="all" className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <Card key={project.title} className="group hover:shadow-lg transition-shadow overflow-hidden">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    <project.icon className="w-5 h-5 text-primary" />
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                  </div>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      ดูเว็บไซต์ <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </TabsContent>
-
-        {["ecommerce", "business", "healthcare", "logistics", "art", "management"].map((category) => (
-          <TabsContent key={category} value={category} className="space-y-8">
+          <TabsContent value="all" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects
-                .filter((project) => project.category === category)
-                .map((project) => (
-                  <Card key={project.title} className="group hover:shadow-lg transition-shadow overflow-hidden">
-                    <div className="relative h-48 w-full">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
+              {projects.map((project) => (
+                <Card key={project.title} className="group hover:shadow-lg transition-shadow overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <CardHeader>
+                    <div className="flex items-center gap-2 mb-2">
+                      <project.icon className="w-5 h-5 text-primary" />
+                      <CardTitle className="text-xl">{project.title}</CardTitle>
                     </div>
-                    <CardHeader>
-                      <div className="flex items-center gap-2 mb-2">
-                        <project.icon className="w-5 h-5 text-primary" />
-                        <CardTitle className="text-xl">{project.title}</CardTitle>
-                      </div>
-                      <CardDescription>{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
-                        <a href={project.url} target="_blank" rel="noopener noreferrer">
-                          ดูเว็บไซต์ <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
+                      <a href={project.url} target="_blank" rel="noopener noreferrer">
+                        ดูเว็บไซต์ <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </TabsContent>
-        ))}
-      </Tabs>
-    </div>
+
+          {["ecommerce", "business", "healthcare", "logistics", "art", "management"].map((category) => (
+            <TabsContent key={category} value={category} className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {projects
+                  .filter((project) => project.category === category)
+                  .map((project) => (
+                    <Card key={project.title} className="group hover:shadow-lg transition-shadow overflow-hidden">
+                      <div className="relative h-48 w-full">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      </div>
+                      <CardHeader>
+                        <div className="flex items-center gap-2 mb-2">
+                          <project.icon className="w-5 h-5 text-primary" />
+                          <CardTitle className="text-xl">{project.title}</CardTitle>
+                        </div>
+                        <CardDescription>{project.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
+                          <a href={project.url} target="_blank" rel="noopener noreferrer">
+                            ดูเว็บไซต์ <ArrowRight className="w-4 h-4 ml-2" />
+                          </a>
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </>
   );
 }

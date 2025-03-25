@@ -10,38 +10,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
-              <svg
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L2 7L12 12L22 7L12 2Z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M2 17L12 22L22 17"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M2 12L12 17L22 12"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <img src="/images/logo-bwp-web.png" height={64} width={64} /> 
               <span className="font-bold text-xl">Buildweb PRO</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Crafting exceptional digital experiences through innovative web design and development.
+               สร้างประสบการณ์ดิจิทัลที่เหนือระดับ ด้วยนวัตกรรมการออกแบบและพัฒนาเว็บ
             </p>
             <div className="flex space-x-4">
               <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
@@ -134,18 +107,19 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>123 Design Street, Creative City, CA 94103</span>
+                <span>3224 ถนนสุขุมวิท ต.บ้านสวน
+                อ.เมือง จ.ชลบุรี 20000</span>
               </li>
               <li>
                 <Link href="tel:+11234567890" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (123) 456-7890</span>
+                  <span>080 558 5550</span>
                 </Link>
               </li>
               <li>
                 <Link href="mailto:hello@buildwebpro.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
                   <Mail className="h-4 w-4" />
-                  <span>hello@buildwebpro.com</span>
+                  <span>buildwebpro@gmail.com</span>
                 </Link>
               </li>
             </ul>
