@@ -89,7 +89,6 @@ const services = [
     ],
     link: "/services/cms-integration"
   },
-  
   {
     icon: <Database className="h-10 w-10 text-primary" />,
     title: "Website Maintenance",

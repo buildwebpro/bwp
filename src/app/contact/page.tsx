@@ -61,9 +61,6 @@ export default function ContactPage() {
                     <h3 className="font-medium text-lg mb-1">Email Us</h3>
                     <a href="mailto:hello@webcraft.studio" className="text-muted-foreground hover:text-primary">
                        buildwebpro@gmail.com
-                    </a><br />
-                    <a href="mailto:support@webcraft.studio" className="text-muted-foreground hover:text-primary">
-                      support@buildwebpro.com
                     </a>
                   </div>
                 </div>

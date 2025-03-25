@@ -2,45 +2,18 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Image } from "@/components/ui/custom-image";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Providers } from "../providers";
 
 export const metadata: Metadata = {
-  title: "About Us | Buildweb PRO - Web Design & Development",
-  description: "Learn about Buildweb PRO, our team, values, and approach to web design and development. We create exceptional digital experiences.",
+  title: "เกี่ยวกับเรา | Buildweb PRO - บริการพัฒนาเว็บไซต์ครบวงจร",
+  description: "เรียนรู้เกี่ยวกับ Buildweb PRO ทีมงาน ค่านิยม และแนวทางการพัฒนาเว็บไซต์ของเรา เราสร้างประสบการณ์ดิจิทัลที่โดดเด่น",
+  keywords: "About Us, Web Development Company, Digital Solutions, Web Design Agency, Thailand Web Development",
+  openGraph: {
+    title: "เกี่ยวกับเรา | Buildweb PRO",
+    description: "เรียนรู้เกี่ยวกับ Buildweb PRO ทีมงาน ค่านิยม และแนวทางการพัฒนาเว็บไซต์ของเรา",
+    type: "website",
+  },
 };
-
-// Team member data
-const teamMembers = [
-  {
-    name: "Alex Johnson",
-    role: "Founder & Creative Director",
-    bio: "With over 15 years of experience in web design and development, Alex founded Buildweb PRO with a passion for creating exceptional digital experiences that drive business growth.",
-    avatar: "AJ",
-    image: "/images/team1.jpg"
-  },
-  {
-    name: "Sarah Chen",
-    role: "Lead UI/UX Designer",
-    bio: "Sarah brings her expertise in user experience and interface design to create intuitive, accessible, and visually stunning digital products that delight users.",
-    avatar: "SC",
-    image: "/images/team2.jpg"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Senior Web Developer",
-    bio: "Michael's technical expertise in full-stack development enables him to build robust, scalable, and high-performance websites and web applications.",
-    avatar: "MR",
-    image: "/images/team3.jpg"
-  },
-  {
-    name: "Emily Taylor",
-    role: "Project Manager",
-    bio: "Emily ensures all projects are delivered on time and within budget while maintaining clear communication between the team and clients throughout the process.",
-    avatar: "ET",
-    image: "/images/team4.jpg"
-  }
-];
 
 export default function AboutPage() {
   return (
@@ -49,10 +22,10 @@ export default function AboutPage() {
       <section className="py-20 bg-muted/30">
         <div className="container px-4 mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            About Us
+            เกี่ยวกับเรา
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're a team of passionate designers and developers creating exceptional digital experiences.
+            เราคือทีมงานที่มีความหลงใหลในการออกแบบและพัฒนาเว็บไซต์ สร้างประสบการณ์ดิจิทัลที่โดดเด่น
           </p>
         </div>
       </section>
@@ -63,17 +36,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                Our Story
+                ประวัติของเรา
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2015, Buildweb PRO began with a simple mission: to help businesses achieve their goals through exceptional web design and development. What started as a small team of passionate designers and developers has grown into a full-service digital agency.
+                  ก่อตั้งขึ้นในปี 2015 Buildweb PRO เริ่มต้นด้วยพันธกิจง่ายๆ: ช่วยให้ธุรกิจบรรลุเป้าหมายผ่านการออกแบบและพัฒนาเว็บไซต์ที่โดดเด่น 
+                  จากทีมเล็กๆ ของนักออกแบบและนักพัฒนาที่มีความหลงใหล ได้เติบโตเป็นบริษัทให้บริการดิจิทัลแบบครบวงจร
                 </p>
                 <p>
-                  Over the years, we've had the privilege of working with clients across various industries, from startups to established enterprises. Each project has added to our expertise and reinforced our commitment to delivering high-quality digital solutions.
+                  ตลอดหลายปีที่ผ่านมา เราได้รับเกียรติที่ได้ทำงานกับลูกค้าในอุตสาหกรรมต่างๆ ตั้งแต่สตาร์ทอัพไปจนถึงองค์กรขนาดใหญ่ 
+                  ทุกโปรเจคได้เพิ่มพูนความเชี่ยวชาญและเสริมสร้างความมุ่งมั่นของเราในการนำเสนอโซลูชันดิจิทัลคุณภาพสูง
                 </p>
                 <p>
-                  Today, we continue to push the boundaries of what's possible on the web, combining creativity with technical excellence to create websites and applications that stand out in a crowded digital landscape.
+                  วันนี้ เรายังคงผลักดันขีดจำกัดของความเป็นไปได้บนเว็บไซต์ โดยผสมผสานความคิดสร้างสรรค์เข้ากับความเป็นเลิศทางเทคนิค 
+                  เพื่อสร้างเว็บไซต์และแอปพลิเคชันที่โดดเด่นในโลกดิจิทัลที่คับคั่ง
                 </p>
               </div>
             </div>
@@ -83,7 +59,7 @@ export default function AboutPage() {
               <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
                 <Image
                   src="/images/web-design2.jpg"
-                  alt="Buildweb PRO team at work"
+                  alt="ทีมงาน Buildweb PRO กำลังทำงาน"
                   fill
                   className="object-cover"
                 />
@@ -93,11 +69,11 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4 absolute -bottom-6 left-6 right-6">
                 <div className="bg-background shadow-lg rounded-lg p-4 border">
                   <p className="text-3xl font-bold text-primary">200+</p>
-                  <p className="text-sm text-muted-foreground">Projects Completed</p>
+                  <p className="text-sm text-muted-foreground">โปรเจคที่เสร็จสิ้น</p>
                 </div>
                 <div className="bg-background shadow-lg rounded-lg p-4 border">
                   <p className="text-3xl font-bold text-primary">8+</p>
-                  <p className="text-sm text-muted-foreground">Years of Experience</p>
+                  <p className="text-sm text-muted-foreground">ปีแห่งประสบการณ์</p>
                 </div>
               </div>
             </div>
@@ -110,30 +86,30 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Our Values
+              ค่านิยมของเรา
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              These core principles guide our work and relationships with clients and each other.
+              หลักการหลักเหล่านี้ชี้นำการทำงานและความสัมพันธ์ของเรากับลูกค้าและทีมงาน
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Excellence",
-                description: "We strive for excellence in every aspect of our work, from design and development to client communication and support."
+                title: "ความเป็นเลิศ",
+                description: "เราแสวงหาความเป็นเลิศในทุกด้านของงานของเรา ตั้งแต่การออกแบบและการพัฒนาไปจนถึงการสื่อสารและการสนับสนุนลูกค้า"
               },
               {
-                title: "Innovation",
-                description: "We embrace new technologies and approaches to deliver cutting-edge solutions that keep our clients ahead of the curve."
+                title: "นวัตกรรม",
+                description: "เราเปิดรับเทคโนโลยีและแนวทางใหม่ๆ เพื่อนำเสนอโซลูชันล้ำสมัยที่ช่วยให้ลูกค้าของเราอยู่เหนือคู่แข่ง"
               },
               {
-                title: "Collaboration",
-                description: "We believe the best results come from close collaboration between our team and our clients throughout the project lifecycle."
+                title: "การทำงานร่วมกัน",
+                description: "เราเชื่อว่าผลลัพธ์ที่ดีที่สุดมาจากการทำงานร่วมกันอย่างใกล้ชิดระหว่างทีมของเราและลูกค้าตลอดวงจรชีวิตของโปรเจค"
               },
               {
-                title: "Integrity",
-                description: "We maintain the highest standards of honesty, transparency, and ethical behavior in all our business practices."
+                title: "ความซื่อสัตย์",
+                description: "เรายึดมั่นในมาตรฐานสูงสุดของความซื่อสัตย์ ความโปร่งใส และพฤติกรรมทางจริยธรรมในการดำเนินธุรกิจทั้งหมดของเรา"
               }
             ].map((value, index) => (
               <div key={index} className="bg-background p-6 rounded-lg border">
@@ -148,47 +124,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team section */}
+      {/* Process section */}
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Meet Our Team
+              กระบวนการทำงานของเรา
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The talented individuals behind Buildweb PRO who bring creativity, expertise, and passion to every project.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="w-32 h-32 mx-auto mb-4 relative rounded-full overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-primary mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container px-4 mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our proven approach ensures we deliver exceptional results for every project.
+              แนวทางที่พิสูจน์แล้วของเรารับประกันว่าเราจะนำเสนอผลลัพธ์ที่โดดเด่นสำหรับทุกโปรเจค
             </p>
           </div>
 
@@ -196,33 +140,33 @@ export default function AboutPage() {
             {[
               {
                 step: "01",
-                title: "Discovery",
-                description: "We start by understanding your business, goals, and target audience to ensure our solution aligns with your needs."
+                title: "ค้นพบ",
+                description: "เราเริ่มต้นด้วยการทำความเข้าใจธุรกิจ เป้าหมาย และกลุ่มเป้าหมายของคุณ เพื่อให้แน่ใจว่าโซลูชันของเราสอดคล้องกับความต้องการของคุณ"
               },
               {
                 step: "02",
-                title: "Planning",
-                description: "We create a detailed project plan that outlines the scope, timeline, and deliverables for your project."
+                title: "วางแผน",
+                description: "เราสร้างแผนโปรเจคโดยละเอียดที่กำหนดขอบเขต ระยะเวลา และผลลัพธ์สำหรับโปรเจคของคุณ"
               },
               {
                 step: "03",
-                title: "Design",
-                description: "Our designers create visually stunning, user-friendly interfaces that reflect your brand and engage your audience."
+                title: "ออกแบบ",
+                description: "นักออกแบบของเราสร้างอินเตอร์เฟซที่สวยงาม ใช้งานง่าย ซึ่งสะท้อนแบรนด์ของคุณและดึงดูดผู้ชม"
               },
               {
                 step: "04",
-                title: "Development",
-                description: "Our developers bring the designs to life, building robust, scalable, and high-performance websites and applications."
+                title: "พัฒนา",
+                description: "นักพัฒนาของเรานำการออกแบบมาสู่ชีวิต สร้างเว็บไซต์และแอปพลิเคชันที่แข็งแกร่ง ขยายขนาดได้ และมีประสิทธิภาพสูง"
               },
               {
                 step: "05",
-                title: "Testing",
-                description: "We thoroughly test every aspect of your project to ensure it works flawlessly across all devices and browsers."
+                title: "ทดสอบ",
+                description: "เราทดสอบทุกแง่มุมของโปรเจคของคุณอย่างละเอียด เพื่อให้แน่ใจว่าทำงานได้อย่างสมบูรณ์บนทุกอุปกรณ์และเบราว์เซอร์"
               },
               {
                 step: "06",
-                title: "Launch",
-                description: "We handle the deployment process, ensuring a smooth launch and providing any necessary training or support."
+                title: "เปิดตัว",
+                description: "เราจัดการกระบวนการติดตั้ง รับประกันการเปิดตัวที่ราบรื่น และให้การฝึกอบรมหรือการสนับสนุนที่จำเป็น"
               }
             ].map((step, index) => (
               <div key={index} className="flex gap-6">
@@ -242,17 +186,17 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Ready to Work with Us?
+              พร้อมที่จะทำงานกับเรา?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Let's discuss how we can help bring your digital vision to life. Contact us today for a free consultation.
+              มาแลกเปลี่ยนความคิดเห็นกันว่าคุณต้องการให้เราช่วยนำวิสัยทัศน์ดิจิทัลของคุณมาสู่ชีวิตอย่างไร ติดต่อเราวันนี้เพื่อรับคำปรึกษาฟรี
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact">ติดต่อเรา</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/services">View Our Services</Link>
+                <Link href="/services">ดูบริการของเรา</Link>
               </Button>
             </div>
           </div>
