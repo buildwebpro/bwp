@@ -89,45 +89,7 @@ const services = [
     ],
     link: "/services/cms-integration"
   },
-  {
-    icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: "Digital Marketing",
-    description: "Strategic digital marketing campaigns to grow your online presence and drive qualified leads.",
-    features: [
-      "Marketing strategy",
-      "Content marketing",
-      "Email campaigns",
-      "Social media management",
-      "PPC advertising"
-    ],
-    link: "/services/digital-marketing"
-  },
-  {
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
-    title: "Mobile App Design",
-    description: "Engaging mobile experiences designed for iOS and Android platforms with a focus on usability.",
-    features: [
-      "iOS & Android design",
-      "App UX/UI",
-      "Cross-platform design",
-      "App prototyping",
-      "User testing"
-    ],
-    link: "/services/mobile-app-design"
-  },
-  {
-    icon: <Layers className="h-10 w-10 text-primary" />,
-    title: "Branding Services",
-    description: "Comprehensive branding solutions to establish a strong, consistent identity across all platforms.",
-    features: [
-      "Logo design",
-      "Brand guidelines",
-      "Visual identity",
-      "Brand messaging",
-      "Brand strategy"
-    ],
-    link: "/services/branding"
-  },
+  
   {
     icon: <Database className="h-10 w-10 text-primary" />,
     title: "Website Maintenance",
@@ -179,10 +141,10 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Comprehensive web design and development solutions tailored to your business needs.
+             ครบทุกโซลูชันออกแบบและพัฒนาเว็บไซต์ครบวงจร ตอบโจทย์ทุกความต้องการทางธุรกิจของคุณ
           </p>
           <Button asChild size="lg">
-            <Link href="/contact">Get Started</Link>
+            <Link href="/contact">ติดต่อเรา</Link>
           </Button>
         </div>
       </section>

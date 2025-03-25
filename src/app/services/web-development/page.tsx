@@ -5,8 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Providers } from "../../providers";
 
 export const metadata: Metadata = {
-  title: "Web Development Services | Buildweb PRO",
-  description: "Professional web development services building robust, scalable, and high-performance websites and web applications.",
+  title: "บริการพัฒนาเว็บไซต์ | Buildweb PRO - พัฒนาเว็บไซต์ด้วยเทคโนโลยีที่ทันสมัย",
+  description: "บริการพัฒนาเว็บไซต์ครบวงจร ด้วยเทคโนโลยีที่ทันสมัย รองรับการทำงานที่ซับซ้อน และมีประสิทธิภาพสูง",
+  keywords: "พัฒนาเว็บไซต์, เว็บแอปพลิเคชัน, Full Stack Development, API Development, Database Integration",
+  openGraph: {
+    title: "บริการพัฒนาเว็บไซต์ | Buildweb PRO",
+    description: "บริการพัฒนาเว็บไซต์ครบวงจร ด้วยเทคโนโลยีที่ทันสมัย รองรับการทำงานที่ซับซ้อน",
+    type: "website",
+  },
 };
 
 export default function WebDevelopmentPage() {
@@ -16,10 +22,10 @@ export default function WebDevelopmentPage() {
       <section className="py-20 bg-muted/30">
         <div className="container px-4 mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Web Development Services
+            บริการพัฒนาเว็บไซต์
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Robust, scalable websites and web applications built with the latest technologies and best coding practices.
+            พัฒนาเว็บไซต์และแอปพลิเคชันด้วยเทคโนโลยีที่ทันสมัย รองรับการทำงานที่ซับซ้อน และมีประสิทธิภาพสูง
           </p>
           <Button asChild size="lg">
             <Link href="/contact" className="font-sans">ขอใบเสนอราคา</Link>
@@ -33,14 +39,14 @@ export default function WebDevelopmentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-3xl font-bold tracking-tight mb-6">
-                Building Digital Solutions That Perform
+                พัฒนาโซลูชันที่ตอบโจทย์ธุรกิจ
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  At WebCraft Studio, we specialize in developing custom web solutions that not only look great but also function flawlessly. Our team of experienced developers combines technical expertise with creative problem-solving to build websites and applications that deliver exceptional user experiences.
+                  ที่ Buildweb PRO เราเข้าใจว่าการพัฒนาเว็บไซต์ไม่ใช่แค่การเขียนโค้ด แต่เป็นการสร้างโซลูชันที่ตอบโจทย์ความต้องการธุรกิจของคุณ ทีมนักพัฒนาของเรามีประสบการณ์ในการสร้างเว็บแอปพลิเคชันที่ซับซ้อน ระบบจัดการข้อมูล และแพลตฟอร์มที่รองรับการทำงานหลากหลายรูปแบบ
                 </p>
                 <p>
-                  Whether you need a simple corporate website, a complex e-commerce platform, or a custom web application, we have the skills and experience to bring your vision to life. We focus on creating clean, efficient code that ensures your website is fast, secure, and scalable.
+                  เราใช้เทคโนโลยีที่ทันสมัยและแนวทางการพัฒนาที่เป็นมาตรฐาน เพื่อสร้างเว็บไซต์ที่มีประสิทธิภาพ ปลอดภัย และสามารถขยายตัวได้ตามความต้องการธุรกิจที่เติบโตขึ้น
                 </p>
               </div>
             </div>
@@ -57,7 +63,7 @@ export default function WebDevelopmentPage() {
           {/* Technologies */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">
-              Technologies We Work With
+              เทคโนโลยีที่เราใช้
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -103,41 +109,41 @@ export default function WebDevelopmentPage() {
           {/* Services */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">
-              Our Web Development Services
+              บริการพัฒนาเว็บไซต์ของเรา
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
                   title: "Frontend Development",
-                  description: "Creating responsive, interactive user interfaces that provide exceptional user experiences across all devices and browsers."
+                  description: "สร้างส่วนติดต่อผู้ใช้ที่ตอบสนองและโต้ตอบได้ ให้ประสบการณ์การใช้งานที่ยอดเยี่ยมบนทุกอุปกรณ์และเบราว์เซอร์"
                 },
                 {
                   title: "Backend Development",
-                  description: "Building robust server-side applications that handle business logic, data processing, and integration with external systems."
+                  description: "พัฒนาส่วนหลังบ้านที่แข็งแรง เพื่อจัดการตรรกะธุรกิจ การประมวลผลข้อมูล และการเชื่อมต่อกับระบบภายนอก"
                 },
                 {
                   title: "Full-Stack Development",
-                  description: "End-to-end development services covering both frontend and backend aspects of your web project."
+                  description: "บริการพัฒนาแบบครบวงจรครอบคลุมทั้งส่วนหน้าและส่วนหลังของโปรเจกต์เว็บของคุณ"
                 },
                 {
                   title: "E-Commerce Development",
-                  description: "Building online stores with secure payment processing, inventory management, and seamless shopping experiences."
+                  description: "สร้างร้านค้าออนไลน์พร้อมระบบชำระเงินที่ปลอดภัย การจัดการสินค้าคงคลัง และประสบการณ์การช้อปปิ้งที่ราบรื่น"
                 },
                 {
                   title: "CMS Implementation",
-                  description: "Setting up and customizing content management systems that give you full control over your website content."
+                  description: "ติดตั้งและปรับแต่งระบบจัดการเนื้อหาที่ให้คุณควบคุมเนื้อหาเว็บไซต์ได้อย่างเต็มที่"
                 },
                 {
                   title: "API Development & Integration",
-                  description: "Creating custom APIs and integrating third-party services to enhance the functionality of your web applications."
+                  description: "สร้าง API เฉพาะและเชื่อมต่อบริการจากภายนอก เพื่อเพิ่มฟังก์ชันการทำงานของเว็บแอปพลิเคชันของคุณ"
                 },
                 {
                   title: "Web Application Development",
-                  description: "Building custom web applications that automate processes, improve efficiency, and solve specific business challenges."
+                  description: "พัฒนาเว็บแอปพลิเคชันเฉพาะที่ช่วยอัตโนมัติกระบวนการ เพิ่มประสิทธิภาพ และแก้ไขความท้าทายทางธุรกิจ"
                 },
                 {
                   title: "Maintenance & Support",
-                  description: "Ongoing technical support, updates, and improvements to keep your website secure, up-to-date, and performing optimally."
+                  description: "ให้บริการสนับสนุนทางเทคนิค การอัปเดต และการปรับปรุงอย่างต่อเนื่อง เพื่อให้เว็บไซต์ของคุณปลอดภัย ทันสมัย และทำงานได้อย่างเหมาะสม"
                 }
               ].map((service, index) => (
                 <div key={index} className="flex gap-4">
@@ -156,29 +162,29 @@ export default function WebDevelopmentPage() {
           {/* Development Process */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">
-              Our Development Process
+              ขั้นตอนการพัฒนาเว็บไซต์ของเรา
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
               {[
                 {
-                  step: "1. Requirements Analysis",
-                  description: "We start by understanding your business goals, target audience, and specific requirements to create a clear roadmap for your project."
+                  step: "1. วิเคราะห์ความต้องการ",
+                  description: "เราเริ่มต้นด้วยการทำความเข้าใจเป้าหมายธุรกิจ กลุ่มเป้าหมาย และความต้องการเฉพาะของคุณ เพื่อสร้างแผนงานที่ชัดเจนสำหรับโปรเจกต์"
                 },
                 {
-                  step: "2. Planning & Architecture",
-                  description: "We develop a detailed project plan and technical architecture that outlines the structure, functionality, and technologies for your web solution."
+                  step: "2. วางแผนและออกแบบสถาปัตยกรรม",
+                  description: "เราพัฒนาแผนโปรเจกต์และสถาปัตยกรรมทางเทคนิคที่อธิบายโครงสร้าง ฟังก์ชันการทำงาน และเทคโนโลยีสำหรับโซลูชันเว็บของคุณ"
                 },
                 {
-                  step: "3. Development",
-                  description: "Our developers write clean, efficient code following industry best practices and coding standards to ensure high-quality output."
+                  step: "3. พัฒนา",
+                  description: "นักพัฒนาของเราเขียนโค้ดที่สะอาดและมีประสิทธิภาพตามแนวทางปฏิบัติที่ดีที่สุดในอุตสาหกรรมและมาตรฐานการเขียนโค้ด เพื่อให้แน่ใจว่าผลลัพธ์มีคุณภาพสูง"
                 },
                 {
-                  step: "4. Testing & QA",
-                  description: "We conduct thorough testing across different devices and browsers to identify and fix any issues before launch."
+                  step: "4. ทดสอบและตรวจสอบคุณภาพ",
+                  description: "เราทำการทดสอบอย่างครอบคลุมบนอุปกรณ์และเบราว์เซอร์ต่างๆ เพื่อระบุและแก้ไขปัญหาก่อนเปิดตัว"
                 },
                 {
-                  step: "5. Deployment & Support",
-                  description: "We handle the deployment process and provide ongoing maintenance and support to ensure your website continues to perform optimally."
+                  step: "5. ติดตั้งและสนับสนุน",
+                  description: "เราจัดการกระบวนการติดตั้งและให้บริการบำรุงรักษาและสนับสนุนอย่างต่อเนื่อง เพื่อให้เว็บไซต์ของคุณทำงานได้อย่างเหมาะสม"
                 }
               ].map((process, index) => (
                 <div key={index} className="bg-card p-6 rounded-lg border relative">
@@ -199,17 +205,17 @@ export default function WebDevelopmentPage() {
         <div className="container px-4 mx-auto text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Ready to Build Your Next Web Project?
+              พร้อมที่จะพัฒนาโปรเจกต์เว็บไซต์ของคุณ?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Contact us today to discuss how our web development expertise can help you create a powerful online presence.
+              ติดต่อเราวันนี้เพื่อพูดคุยว่าความเชี่ยวชาญในการพัฒนาเว็บไซต์ของเราจะช่วยคุณสร้างการมีอยู่บนโลกออนไลน์ที่ทรงพลังได้อย่างไร
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="/contact">ติดต่อเรา</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/projects">View Our Work</Link>
+                <Link href="/projects">ดูผลงานของเรา</Link>
               </Button>
             </div>
           </div>
