@@ -35,7 +35,7 @@ export default function HeroSection() {
           <div className="pt-12 w-full max-w-6xl mx-auto">
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="https://scontent.fbkk23-1.fna.fbcdn.net/v/t39.30808-6/486386928_10164968549595558_7378618958610974810_n.png?stp=dst-png_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=7Mu61Eiqc1MQ7kNvgF57utp&_nc_oc=AdmHwTEiZ2Fupllghhn-03YM3jp8Q91JDQLR2vFKSlfrjbwqpfrLqvzcUNMEm7tiQfY&_nc_zt=23&_nc_ht=scontent.fbkk23-1.fna&_nc_gid=fTqzivgqxknjuqI-tWfZKw&oh=00_AYGJ6wudqX-nn0jZ7mR_xgAyIsDJIqY-md3udZcWy6SMzA&oe=67E76ED7"
+                src="https://cdn.pixabay.com/photo/2017/08/10/08/47/laptop-2620118_1280.jpg"
                 alt="Web Design and Development"
                 fill
                 priority
